@@ -17,13 +17,12 @@ var Alunos = [
     },
 ];
 
-Alunos.sort(function() {
-    if(nota > 7) {
-        return nome;
-    }
-    else {
-        return false;
-    } 
-})
+function filtrarNotasAlta(alunos) {
 
-console.log(Alunos)
+    return alunos.filter(function(aluno) {
+    return aluno.nota >= 6;
+    });
+    }
+
+    const notasAltas = filtrarNotasAlta(Alunos);
+    console.log(notasAltas);
